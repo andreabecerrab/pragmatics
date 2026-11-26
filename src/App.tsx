@@ -1,80 +1,44 @@
-import './App.css'
-// @ts-ignore - UserCard is implemented in JavaScript and has no declaration file
-import UserCard from './components/UserCard.jsx';
-// @ts-ignore - SelectablePillCard is implemented in JavaScript and has no declaration file
-import SelectablePill from './components/SelectablePillCard.jsx'
-// @ts-ignore - SelectablePillCard is implemented in JavaScript and has no declaration file
-import ToggleButtons from './components/ToggleButtons.jsx';
-// @ts-ignore - SelectablePillCard is implemented in JavaScript and has no declaration file
-import TextInput from './components/TextInput.jsx';
-// @ts-ignore - SelectablePillCard is implemented in JavaScript and has no declaration file
-import OptionCard from './components/OptionCard.jsx';
+import { useEffect, useState } from 'react';
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
+import './App.css';
+import welcomeImage from './assets/img/welcome.png';
+import HomePage from './pages/HomePage';
+import SkillsPage from './pages/SkillsPage';
+import SessionPage from './pages/SessionPage';
+import LiveSessionPage from './pages/LiveSessionPage';
 
-function App() {
+function WelcomeIntro() {
+  const [visible, setVisible] = useState(true);
 
-  let selected: boolean = false;
-  let setSelected: (value: boolean) => void = (value: boolean) => {
-    selected = value;
-  };
+  useEffect(() => {
+    const timer = window.setTimeout(() => setVisible(false), 1800);
+    return () => window.clearTimeout(timer);
+  }, []);
 
-  let setLevel: (value: string) => void = (value: string) => {
-    console.log(value);
-  }
-
-  let message: string = '';
-  let setMessage: (value: string) => void = (value: string) => {
-    message = value;
-  }
-
-  const handleAttach = () => {
-    console.log("Attach file");
-  }
-
-  const handleSend = () => {
-    console.log("Send message:", message);
-  }
+  if (!visible) return null;
 
   return (
-    <section>
-      <UserCard
-        name="Chloe Buscema"
-        age={9}
-        characteristics={["Irony", "Level 1"]}
-        img="/images/chloe.png"
-        onSeeProfile={() => console.log("Profile")}
-        onPractice={() => console.log("Practice")}
-      />
-
-      <SelectablePill
-        selected={selected}
-        onChange={setSelected}
-        img="/images/chloe.png"
-        title="Sarcasm"
-        description="Understanding playful or critical teasing behind literal words."
-      >
-      </SelectablePill>
-      <ToggleButtons
-        options={['Beginner', 'Intermediate', 'Advanced']}
-        multiple={false}
-        onChange={setLevel}
-      />
-      <TextInput
-        value={message}
-        onChange={setMessage}
-        placeholder="Write a message..."
-        firstIcon="attach_file"
-        secondIcon="send"
-        onFirstAction={handleAttach}
-        onSecondAction={handleSend}
-      />
-      <OptionCard
-        title="Explore the city"
-        status="Available"
-        img="/images/city.jpg"
-        onAction={() => console.log('Open option')}
-      />
-    </section>
-  )
+    <div className="welcome-screen" aria-hidden="true">
+      <img className="welcome-screen__image" src={welcomeImage} alt="" />
+    </div>
+  );
 }
 
-export default App
+function App() {
+  const { pathname } = useLocation();
+
+  return (
+    <>
+      {pathname === '/' && <WelcomeIntro />}
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/skills/:personId" element={<SkillsPage />} />
+        <Route path="/session" element={<SessionPage />} />
+        <Route path="/live/session" element={<LiveSessionPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </>
+  );
+}
+
+export default App;

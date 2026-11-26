@@ -1,0 +1,208 @@
+.page {
+  min-height: 100vh;
+  padding: clamp(24px, 5vw, 60px);
+  box-sizing: border-box;
+  background-color: var(--bg-pg);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.page h1 {
+  margin: 0;
+  color: var(--text-h);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+  font-size: 36px;
+}
+p{
+    margin: 4px 0;
+}
+
+.home-page > section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.page-rows{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.skills-mascot{
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    width: 360px;
+}
+
+.skills-btn{
+    align-self: end;
+}
+
+.session-page {
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(220px, 3fr);
+    align-items: start;
+    gap: clamp(24px, 4vw, 56px);
+}
+
+.session-questions {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.session-question {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.session-question__heading {
+    margin: 0;
+    color: var(--text-h);
+    font-size: 24px;
+}
+
+.session-question__divider {
+    width: 100%;
+    height: 1px;
+    background: rgb(0 0 0 / 16%);
+}
+
+.session-question__text {
+    width: 100%;
+}
+
+.session-question__options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.session-actions {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+}
+
+.session-start-button {
+    width: 100%;
+    max-width: 260px;
+}
+
+@media (max-width: 760px) {
+    .session-page {
+        grid-template-columns: 1fr;
+    }
+
+    .session-actions {
+        justify-content: stretch;
+    }
+
+    .session-start-button {
+        max-width: none;
+    }
+}
+
+.activity-settings-backdrop {
+    position: fixed;
+    z-index: 1100;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: rgb(0 0 0 / 40%);
+}
+
+.activity-settings-dialog {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: min(100%, 680px);
+    max-height: min(90vh, 800px);
+    overflow-y: auto;
+    padding: clamp(24px, 5vw, 40px);
+    border-radius: 24px;
+    background: #ebf0f3;
+    box-shadow: 0 20px 60px rgb(0 0 0 / 20%);
+}
+
+.activity-settings-dialog h1 {
+    font-size: clamp(26px, 4vw, 36px);
+}
+
+.activity-preparing-dialog {
+    align-items: center;
+    text-align: center;
+}
+
+.activity-preparing-dialog h1 {
+    margin: 0;
+}
+
+.activity-preparing-dialog p {
+    margin: 0;
+}
+
+.activity-preparing-image {
+    display: block;
+    width: min(52vw, 240px);
+    max-height: 34vh;
+    object-fit: contain;
+}
+
+.activity-settings-divider {
+    width: 100%;
+    height: 1px;
+    background: rgb(0 0 0 / 12%);
+}
+
+.activity-settings-field {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.activity-settings-field p {
+    margin: 0;
+    font-weight: 600;
+}
+
+.activity-settings-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.activity-settings-actions .app-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+@media (max-width: 560px) {
+    .activity-settings-actions {
+        flex-direction: column-reverse;
+    }
+
+    .activity-settings-actions .app-button {
+        width: 100%;
+    }
+}
+
+.session-mascot {
+    width: 360px;
+    position: fixed;
+    bottom: 7rem;
+    right: -1.5rem;
+    width: 360px;
+}

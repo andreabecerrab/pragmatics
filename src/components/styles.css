@@ -3,7 +3,7 @@
   box-sizing: border-box;
   width: 100%;
   max-width: 400px;
-  padding: 32px;
+  padding: 1rem;
   background: var(--white);
   border: var(--user-card-border);
   border-radius: var(--user-card-radius);
@@ -90,7 +90,8 @@
   align-items: center;
   justify-content: center;
   gap: 16px;
-  min-width: 0;
+  min-width: fit-content;
+  width: fit-content;
   max-height: 32px;
   padding: 14px 24px;
   border: 0;
@@ -149,6 +150,7 @@
 .selectable-pill {
   justify-content: center;
   min-height: 42px;
+  min-width: 340px;
   padding: 9px 20px;
   border: 1px solid var(--light-gray);
   border-radius: 999px;
@@ -160,8 +162,13 @@
   cursor: pointer;
   transition: background-color 160ms ease,
               border-color 160ms ease;
-  h2, p{
+  h2{
     font-size: 1rem;
+    margin: 0;
+  }
+
+  p{
+    font-size: 14px;
     margin: 0;
   }
 
@@ -172,8 +179,9 @@
 }
 
 .selectable-pill--selected {
+  border: 3px solid;
+  background: var(--bg-card);
   border-color: var(--turquoise);
-  background: var(--turquoise);
 }
 
 .selectable-pill:focus-visible {

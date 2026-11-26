@@ -1,0 +1,38 @@
+[
+  {
+    "id": "sarcasm",
+    "title": "Sarcasm",
+    "description": "Understanding playful or critical teasing behind literal words.",
+    "imageUrl": "../assets/img/skills/sarcasm.png"
+  },
+  {
+    "id": "irony",
+    "title": "Irony",
+    "description": "Recognizing when words mean the opposite of what is said.",
+    "imageUrl": "../assets/img/skills/irony.png"
+  },
+  {
+    "id": "metaphors",
+    "title": "Metaphors",
+    "description": "Decoupling literal images from figurative everyday meanings.",
+    "imageUrl": "../assets/img/skills/metaphors.png"
+  },
+  {
+    "id": "jokes-and-humor",
+    "title": "Jokes & Humor",
+    "description": "Identifying wordplay, punchlines, and playful social intent.",
+    "imageUrl": "../assets/img/skills/jokes.png"
+  },
+  {
+    "id": "white-lies",
+    "title": "White lies",
+    "description": "Distinguishing polite social remarks from literal truth.",
+    "imageUrl": "../assets/img/skills/whitelies.png"
+  },
+  {
+    "id": "conversational-implicature",
+    "title": "Conversational Implicature",
+    "description": "Reading between the lines to grasp unstated social cues.",
+    "imageUrl": "../assets/img/skills/conversational.png"
+  }
+]

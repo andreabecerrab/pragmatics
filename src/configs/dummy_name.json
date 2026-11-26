@@ -1,0 +1,20 @@
+[
+  {
+    "id": "usr-001",
+    "name": "Elena Rostova",
+    "age": 29,
+    "imageUrl": "https://i.pravatar.cc/300?img=5"
+  },
+  {
+    "id": "usr-002",
+    "name": "Marcus Vance",
+    "age": 34,
+    "imageUrl": "https://i.pravatar.cc/300?img=11"
+  },
+  {
+    "id": "usr-003",
+    "name": "Sora Takahashi",
+    "age": 26,
+    "imageUrl": "https://i.pravatar.cc/300?img=9"
+  }
+]

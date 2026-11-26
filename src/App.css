@@ -1,6 +1,56 @@
-body{
+body {
   background-color: var(--pink);
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
   margin: 0;
+}
+
+.welcome-screen {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: var(--pink);
+  animation: welcome-screen-exit 650ms ease-in 1.15s forwards;
+}
+
+.welcome-screen__image {
+  display: block;
+  width: min(78vw, 680px);
+  max-height: 78vh;
+  object-fit: contain;
+  animation: welcome-image-intro 1.8s ease both;
+}
+
+@keyframes welcome-image-intro {
+  0% {
+    opacity: 0;
+    transform: scale(0.82) translateY(18px);
+  }
+
+  35%, 75% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.04) translateY(-8px);
+  }
+}
+
+@keyframes welcome-screen-exit {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome-screen,
+  .welcome-screen__image {
+    animation-duration: 1ms;
+    animation-delay: 0ms;
+  }
 }

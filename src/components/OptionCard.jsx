@@ -5,8 +5,6 @@ export default function OptionCard({
   title,
   status,
   img,
-  onAction,
-  buttonIcon = 'arrow_forward',
   buttonLabel,
   className = '',
 }) {
