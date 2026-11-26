@@ -1,0 +1,42 @@
+@media (max-width: 560px) {
+  .user-card {
+    padding: 22px;
+    border-radius: 26px;
+  }
+
+  .user-card__top {
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .user-card__avatar {
+    flex-basis: 84px;
+    width: 84px;
+    height: 84px;
+  }
+
+  .user-card__name {
+    margin-bottom: 12px;
+    font-size: 22px;
+  }
+
+  .user-card__chip {
+    padding: 9px 4px;
+    font-size: 9px;
+    font-style:bold;
+  }
+
+  .user-card__divider {
+    margin: 24px 0;
+  }
+
+  .user-card__actions {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .app-button {
+    min-height: 56px;
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,380 @@
+
+.user-card {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 400px;
+  padding: 32px;
+  background: var(--white);
+  border: var(--user-card-border);
+  border-radius: var(--user-card-radius);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 7%);
+  color: var(--black);
+  font-family: inherit;
+
+  h2{
+    font-size: 1rem;
+  } 
+}
+
+.user-card *,
+.user-card *::before,
+.user-card *::after {
+  box-sizing: border-box;
+}
+
+.user-card__top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.user-card__avatar {
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--light-cyan);
+}
+
+.user-card__info {
+  min-width: 0;
+}
+
+.user-card__name {
+  margin: 0 0 16px;
+  font-size: clamp(22px, 3.6vw, 32px);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.user-card__age {
+  white-space: nowrap;
+}
+
+.user-card__characteristics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.user-card__chip {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: var(--light-cyan);
+  font-size: .75rem;
+  line-height: 1.15;
+  font-weight: 600;
+}
+
+.user-card__divider {
+  height: 1px;
+  margin: 32px 0;
+  background: var(--light-gray);
+}
+
+.user-card__actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* BuUTTON */
+
+.app-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-width: 0;
+  max-height: 32px;
+  padding: 14px 24px;
+  border: 0;
+  border-radius: 999px;
+  color: var(--black);
+  font: inherit;
+  font-size: .75rem;
+  line-height: 1.15;
+  font-weight: 500;
+  cursor: pointer;
+  transition: filter 150ms ease, transform 150ms ease;
+}
+
+.app-button:hover:not(:disabled) {
+  filter: brightness(0.97);
+}
+
+.app-button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.app-button:focus-visible {
+  outline: 3px solid var(--dark-gray);
+  outline-offset: 3px;
+}
+
+.app-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.app-button--primary {
+  background: var(--pink);
+}
+
+.app-button--secondary {
+  background: var(--turquoise);
+}
+
+.app-button--terciary {
+  background: var(--white);
+  border: 1px solid var(--light-gray);
+}
+
+.app-button__icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+}
+
+
+/* SELECTABLE CARD */
+
+
+.selectable-pill {
+  justify-content: center;
+  min-height: 42px;
+  padding: 9px 20px;
+  border: 1px solid var(--light-gray);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--black);
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background-color 160ms ease,
+              border-color 160ms ease;
+  h2, p{
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .pill_info{
+    text-align: start;
+    max-width: 245px;
+  }
+}
+
+.selectable-pill--selected {
+  border-color: var(--turquoise);
+  background: var(--turquoise);
+}
+
+.selectable-pill:focus-visible {
+  outline: 3px solid rgb(52 207 207 / 35%);
+  outline-offset: 2px;
+}
+
+.selectable-pill:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+/* Toggle button group */
+.toggle-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.toggle-buttons__pill {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 9px 20px;
+  border: 1px solid var(--light-gray);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--black);
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.toggle-buttons__pill--selected {
+  border: 2px solid;
+  border-color: var(--turquoise);
+  background: var(--light-cyan);
+}
+
+.toggle-buttons__pill:focus-visible {
+  outline: 3px solid rgb(52 207 207 / 35%);
+  outline-offset: 2px;
+}
+
+.toggle-buttons__pill:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+/* Multiline text input with bottom-right actions */
+.text-input {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  min-height: 132px;
+  padding: 16px 16px 60px;
+  border: 1px solid var(--light-gray);
+  border-radius: 18px;
+  background: var(--white);
+  color: var(--black);
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.text-input:focus-within {
+  border-color: var(--turquoise);
+  box-shadow: 0 0 0 3px rgb(52 207 207 / 16%);
+}
+
+.text-input__field {
+  display: block;
+  width: 100%;
+  min-height: 64px;
+  padding: 0;
+  resize: vertical;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--black);
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.text-input__field::placeholder {
+  color: var(--dark-gray);
+  opacity: 0.75;
+}
+
+.text-input__field:disabled {
+  cursor: not-allowed;
+}
+
+.text-input__actions {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.text-input__icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid var(--light-gray);
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--black);
+  cursor: pointer;
+  transition: background-color 150ms ease, border-color 150ms ease,
+    transform 150ms ease;
+}
+
+.text-input__icon-button .material-symbols-rounded {
+  font-size: 21px;
+  line-height: 1;
+}
+
+.text-input__icon-button--primary {
+  border-color: var(--turquoise);
+  background: var(--turquoise);
+}
+
+.text-input__icon-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.text-input__icon-button:focus-visible {
+  outline: 3px solid rgb(52 207 207 / 35%);
+  outline-offset: 2px;
+}
+
+.text-input__icon-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Option card: text/status on top, image and action button at the bottom */
+.option-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 222px;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--br-card);
+  border-radius: 20px;
+  background: var(--bg-card);
+  color: var(--black);
+  font-family: inherit;
+  padding: 12px;
+  position: relative;
+}
+
+.option-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.option-card__title {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.option-card__status {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: var(--light-cyan);
+  color: var(--dark-gray);
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+
+.option-card__image {
+  display: block;
+  width: 200px;
+  height: 155px;
+  object-fit: cover;
+}
+
+.card-option-img-btn{
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+
+}

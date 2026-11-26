@@ -1,0 +1,39 @@
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --border: #e5e4e7;
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --turquoise: #34CFCF;
+  --pink: #FFB7CD;
+  --light-cyan: #C4F4F3;
+  --white: #FFFFFF;
+  --black: #000000;
+  --dark-gray: #5D6B6B;
+  --light-gray: #D1DCDD;
+  --burgundy: #AE203E;
+  --bg-card: #CAE1E4;
+  --br-card: #74B3BE;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --user-card-radius: 34px;
+  --user-card-border: 1px solid var(--light-gray);
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
