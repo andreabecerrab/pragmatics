@@ -37,6 +37,8 @@ export default function SkillsPage() {
     const activityData = {
       personId: person.id,
       personName: person.name,
+      personAge: person.age,
+      personImg: person.imageUrl,
       difficulty: difficulty[0],
       questionCount: questionCount[0],
       questionTimer: questionTimer[0],

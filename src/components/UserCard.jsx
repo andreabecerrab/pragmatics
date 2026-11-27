@@ -24,7 +24,6 @@ export default function UserCard({
     <article className="user-card">
       <div className="user-card__top">
         <img className="user-card__avatar" src={img} alt={`${name}'s avatar`} />
-
         <div className="user-card__info">
           <h2 className="user-card__name">
             {name} <span className="user-card__age">- Age {age}</span>

@@ -15,8 +15,13 @@
   line-height: 1.1;
   font-size: 36px;
 }
+
 p{
     margin: 4px 0;
+}
+
+h2{
+    margin-bottom: 0px;
 }
 
 .home-page > section {
@@ -32,6 +37,15 @@ p{
     gap: 24px;
 }
 
+.pages-cols{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+
+}
 .skills-mascot{
     position: absolute;
     bottom: 3rem;
@@ -50,18 +64,12 @@ p{
     gap: clamp(24px, 4vw, 56px);
 }
 
-.session-questions {
-    display: flex;
-    min-width: 0;
-    flex-direction: column;
-    gap: 32px;
-}
-
 .session-question {
     display: flex;
     min-width: 0;
     flex-direction: column;
     gap: 16px;
+    max-width: 700px;
 }
 
 .session-question__heading {
@@ -205,4 +213,175 @@ p{
     bottom: 7rem;
     right: -1.5rem;
     width: 360px;
+}
+
+.live-session-page {
+    gap: 24px;
+}
+
+.live-session-panel {
+    box-sizing: border-box;
+    min-width: 0;
+    padding: clamp(20px, 3vw, 32px);
+    border: 1px solid var(--light-gray);
+    border-radius: 20px;
+    background: var(--white);
+}
+
+.live-session-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.live-session-header h1 {
+    margin: 0;
+    color: var(--text-h);
+}
+
+.live-session-header > div:first-child {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.live-session-header > div:first-child .user-card__avatar {
+    grid-row: span 2;
+}
+
+.live-session-header > div:first-child p {
+    margin: 0;
+}
+
+.live-session-connection-icon {
+    display: block;
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    border-radius: 50%;
+    padding: 0.25rem;
+    background-color: var(--light-cyan);
+}
+
+.status-text{
+    font-size: 12px;
+    margin: 0;
+}
+
+.live-session-eyebrow {
+    margin: 0 0 8px;
+    color: var(--dark-gray);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.live-session-summary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.live-session-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.live-session-columns {
+    display: grid;
+    grid-template-columns: minmax(0, 65fr) minmax(260px, 35fr);
+    align-items: start;
+    gap: 24px;
+}
+
+.live-session-main-column {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.live-session-activity{
+    position: relative;
+    min-height: 400px;
+    padding-bottom: 5rem;
+}
+
+.live-session-activity h2,
+.live-session-panel h3 {
+    margin: 0 0 16px;
+    color: var(--text-h);
+}
+
+.live-session-activity p {
+    margin: 8px 0 0;
+}
+
+.live-session-logs {
+    min-height: 220px;
+}
+
+.live-session-notes {
+    min-height: 300px;
+}
+
+.live-session-notes textarea {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 210px;
+    resize: vertical;
+    padding: 12px;
+    border: 1px solid var(--light-gray);
+    border-radius: 12px;
+    background: var(--white);
+    color: var(--text-h);
+    font: inherit;
+}
+
+.live-session-notes textarea:focus-visible {
+    outline: 3px solid rgb(52 207 207 / 35%);
+    outline-offset: 2px;
+}
+
+@media (max-width: 760px) {
+    .live-session-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .live-session-summary {
+        justify-content: flex-start;
+    }
+
+    .live-session-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+.pg-pills-section{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.live-seesion-info{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.live-seesion-btns{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 0.5rem;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
 }

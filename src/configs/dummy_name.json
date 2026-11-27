@@ -1,20 +1,20 @@
 [
   {
     "id": "usr-001",
-    "name": "Elena Rostova",
-    "age": 29,
-    "imageUrl": "https://i.pravatar.cc/300?img=5"
+    "name": "Maya Lin",
+    "age": 8,
+    "imageUrl": "https://api.dicebear.com/9.x/adventurer/svg?seed=Maya"
   },
   {
     "id": "usr-002",
-    "name": "Marcus Vance",
-    "age": 34,
-    "imageUrl": "https://i.pravatar.cc/300?img=11"
+    "name": "Leo Carter",
+    "age": 10,
+    "imageUrl": "https://api.dicebear.com/9.x/adventurer/svg?seed=Leo"
   },
   {
     "id": "usr-003",
-    "name": "Sora Takahashi",
-    "age": 26,
-    "imageUrl": "https://i.pravatar.cc/300?img=9"
+    "name": "Sofia Morales",
+    "age": 7,
+    "imageUrl": "https://api.dicebear.com/9.x/adventurer/svg?seed=Sofia"
   }
 ]

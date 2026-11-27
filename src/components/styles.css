@@ -143,6 +143,40 @@
   flex: 0 0 auto;
 }
 
+.app-pill {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 28px;
+  padding: 4px 12px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.app-pill--primary {
+  background: var(--light-gray);
+  color: var(--black);
+}
+
+.app-pill--info {
+  background: var(--light-cyan);
+  color: var(--text-h);
+}
+
+.app-pill--success {
+  background: var(--succes);
+  color: var(--text-h);
+}
+
+.app-pill--error {
+  border-color: var(--burgundy);
+  background: var(--burgundy);
+  color: var(--white);
+}
+
 
 /* SELECTABLE CARD */
 
