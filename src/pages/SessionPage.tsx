@@ -55,14 +55,14 @@ export default function SessionPage() {
     <main className="page session-page">
       <section className="session-questions" aria-label="Activity questions">
         <Button variant="terciary" onClick={goSkills}> Back </Button>
-        <div>
+        <div className='skills-title'>
         <h1 className='page-title'>Activity questions</h1>
         <p>Review, discard and freely edit each question and answers of the activity.</p>
         </div>
         {examples.map((example, index) => (
           <article className="session-question" key={`${example.id}-${index}`}>
             <div>
-                <h1 className="session-question__heading">Question {example.id}</h1>
+                <h2 className="session-question__heading">Question {example.id}</h2>
                 {/* <div className="session-question__divider" /> */}
             </div>
             <TextInput
