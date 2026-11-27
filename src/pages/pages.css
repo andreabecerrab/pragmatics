@@ -124,6 +124,12 @@ h2{
     .session-start-button {
         max-width: none;
     }
+    .option-card{
+        width: 100% !important;
+    }
+    .skills-mascot{
+        display: none;
+    }
 }
 
 .activity-settings-backdrop {
@@ -203,6 +209,10 @@ h2{
 }
 
 @media (max-width: 560px) {
+    .session-mascot {
+        display: none;
+    }
+
     .activity-settings-actions {
         flex-direction: column-reverse;
     }
