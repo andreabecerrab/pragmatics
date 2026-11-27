@@ -1,5 +1,15 @@
 # React + TypeScript + Vite
 
+## Deploy to GitHub Pages
+
+This repository deploys automatically to GitHub Pages whenever a commit is pushed to `main`. The workflow builds the Vite app, publishes the `dist` directory, and includes a 404 fallback so React Router routes continue to work when opened or refreshed directly.
+
+After the first successful workflow run, the site is available at:
+
+https://andreabecerrab.github.io/pragmatics/
+
+In GitHub, open **Settings → Pages** and set **Build and deployment → Source** to **GitHub Actions**. You can also start a deployment manually from the repository's **Actions** tab using **Deploy to GitHub Pages → Run workflow**.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
