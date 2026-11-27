@@ -93,7 +93,12 @@ export default function SkillsPage() {
           />
         ))}
     </div>
-    <Button variant="secondary" onClick={createContent} className="skills-btn">
+    <Button
+      variant="secondary"
+      onClick={createContent}
+      className="skills-btn"
+      disabled={selectedTopics.length === 0}
+    >
         Confirm
     </Button>
       <img src={raccoonHi} className="skills-mascot" alt="" />

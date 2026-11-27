@@ -30,11 +30,6 @@
     margin: 24px 0;
   }
 
-  .user-card__actions {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
   .app-button {
     min-height: 56px;
     font-size: 20px;
